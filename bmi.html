@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BODY MASS INDEX</title>
+	<style type="text/css">
+		*{
+			margin: 0%;
+			padding: 0%;
+			box-sizing: border-box;
+		}
+		.main_div1{
+			width: 100vw;
+			height: 100vh;
+			background-image:url("https://images.pexels.com/photos/669578/pexels-photo-669578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+			background-repeat: no-repeat;
+			background-size:cover;
+			background-position: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.main_div{
+			background: transparent;
+			outline: black;
+			border: 2px solid black;
+			padding: 4%;
+			width: auto;
+			height: auto;
+			display: grid;
+			place-items: center;
+			position: absolute;
+			box-shadow: 5px 10px;
+		}
+		.header{
+			margin-bottom: 4%;
+			font-family: 'Times New Roman', Times, serif;
+			position: relative;
+		}
+		.btn{
+			display: grid;
+			place-items: center;
+			margin-top: 4%;
+		}
+		.output{
+			margin-top: 3%;
+			display: grid;
+			place-items: center;
+		}
+		button{
+			background-color: lightgrey;
+			font-weight: bold;
+			height: 2rem;
+			width: 5rem;
+			border-radius: 6px;
+		}
+		button:hover{
+			background-color: darkgray;
+		}
+		.final_div{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 4%;
+		}
+		input{
+			width: 12rem;
+			height: 2rem;
+			background: transparent;
+			padding: 2%;
+		}
+		input::placeholder{
+			color: black;
+			font-weight: bolder;
+			padding: 2%;
+		}
+		label{
+			font-weight: bold;
+		
+		.footer{
+			margin-bottom: 0%;s
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main_div1">
+	<div class="main_div">
+	<div class="header">
+	<h1>BMI CALCULATOR</h1>
+	</div>
+	<div>
+		<form onsubmit="return false">
+
+			<label>Weight:</label>
+			<input type="number" name="" id="weight" placeholder="WEIGHT IN KG">
+			<label>Height:</label>
+			<input type="text" name="" id="height" placeholder="HEIGHT IN FEET">
+			<br>
+			<div class="btn">
+			<button type="submit" onclick="fun()">Get BMI</button>
+			</div>
+			<br>
+			<div class="final_div">
+			<label>BMI Value:</label>
+			<input type="number" name="" id="bmi_value">
+			</div>
+		</form>
+	</div class="footer">
+	<p>A healthy BMI range between 19 and 25</p>
+</div>
+</div>
+	<script type="text/javascript">
+		function fun(){
+			var w = document.getElementById("weight").value;
+			var h = document.getElementById("height").value;
+
+			h = h*12;
+			h = h*0.025;
+
+			var bmi =Math.round( w/(h*h));
+			document.getElementById("bmi_value").value = bmi;
+		}
+		
+	</script>
+</body>
+</html>
